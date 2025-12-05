@@ -240,7 +240,7 @@ where
             model.add_constraint(Expression::from(vars[root].active).geq(1));
         }
 
-        log::info!("Model using {num_vars} variables and {num_cons} constraints");
+        log::info!("Model using {num_vars} variables and {num_cons} constraints ");
         log::info!("Solving using {}", <S as Solver>::name(),);
         let start = Instant::now();
         let solution = model
