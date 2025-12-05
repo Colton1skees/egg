@@ -59,6 +59,7 @@ mod util;
 #[derive(Clone, Copy, Default, Ord, PartialOrd, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde-1", derive(serde::Serialize, serde::Deserialize))]
 #[cfg_attr(feature = "serde-1", serde(transparent))]
+#[repr(C)]
 pub struct Id(pub u32);
 
 impl From<usize> for Id {
